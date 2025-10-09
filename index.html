@@ -49,17 +49,20 @@
         }
         
         .container {
-            background: rgba(40, 40, 40, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 107, 53, 0.2);
-            border-radius: 24px;
-            padding: 48px;
-            max-width: 500px;
+            background: linear-gradient(145deg, rgba(30, 30, 30, 0.97) 0%, rgba(45, 45, 45, 0.95) 100%);
+            backdrop-filter: blur(25px);
+            border: 1.5px solid rgba(255, 107, 53, 0.25);
+            border-radius: 28px;
+            padding: 52px;
+            max-width: 520px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-                        0 0 100px rgba(255, 107, 53, 0.1);
-            animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.6),
+                0 0 120px rgba(255, 107, 53, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
         }
         
         @keyframes slideUp {
@@ -82,7 +85,8 @@
         .logo {
             width: 200px;
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.3));
+            filter: brightness(0.9) contrast(1.1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+            background: transparent;
         }
         
         /* Placeholder for logo - replace with actual logo */
@@ -107,33 +111,38 @@
         
         .badge {
             display: inline-block;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            color: #ff6b35;
-            padding: 6px 16px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.12) 100%);
+            border: 1.5px solid rgba(255, 107, 53, 0.4);
+            color: #ff8c42;
+            padding: 8px 20px;
+            border-radius: 24px;
             font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
         h1 {
             color: #ffffff;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.8px;
+            line-height: 1.1;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-        
+
         .subtitle {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 17px;
+            line-height: 1.65;
+            margin-bottom: 44px;
+            font-weight: 450;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         }
         
         .buttons {
@@ -147,18 +156,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 32px;
-            border-radius: 12px;
+            padding: 18px 36px;
+            border-radius: 16px;
             text-decoration: none;
             font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-weight: 650;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             cursor: pointer;
             border: none;
             position: relative;
             overflow: hidden;
             text-transform: none;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
         
         .btn::before {
@@ -202,6 +212,18 @@
             box-shadow: 0 10px 30px rgba(42, 171, 238, 0.4);
             background: linear-gradient(135deg, #229ED9 0%, #2AABEE 100%);
         }
+
+        .btn-website {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .btn-website:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+            background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+        }
         
         .btn-icon {
             display: inline-flex;
@@ -239,15 +261,18 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            color: #ff6b35;
-            padding: 8px 16px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 140, 66, 0.12) 100%);
+            border: 1.5px solid rgba(255, 107, 53, 0.4);
+            color: #ff8c42;
+            padding: 10px 18px;
+            border-radius: 24px;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 700;
             display: none;
-            animation: fadeIn 0.5s ease;
+            animation: fadeIn 0.6s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+            backdrop-filter: blur(10px);
+            letter-spacing: 0.3px;
         }
         
         .partner-badge.visible {
@@ -259,33 +284,42 @@
             top: 20px;
             left: 20px;
             display: flex;
-            gap: 10px;
+            gap: 8px;
             z-index: 100;
         }
-        
+
         .lang-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(40, 40, 40, 0.9);
+            border-color: rgba(255, 107, 53, 0.3);
+            color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
         }
-        
+
         .lang-btn.active {
-            background: rgba(255, 107, 53, 0.2);
-            border-color: #ff6b35;
+            background: rgba(255, 107, 53, 0.15);
+            border-color: rgba(255, 107, 53, 0.4);
             color: #ff6b35;
+        }
+
+        .lang-btn.active:hover {
+            background: rgba(255, 107, 53, 0.2);
         }
         
         @keyframes fadeIn {
@@ -293,30 +327,135 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        @media (max-width: 480px) {
+        /* Tablet styles */
+        @media (max-width: 768px) {
             .container {
-                padding: 32px 24px;
+                padding: 40px 30px;
+                max-width: 90%;
             }
-            
+
             h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
-            
+
+            .subtitle {
+                font-size: 16px;
+                margin-bottom: 36px;
+            }
+
+            .lang-switcher {
+                top: 10px;
+                left: 10px;
+            }
+
+            .partner-badge {
+                top: 10px;
+                right: 10px;
+                font-size: 11px;
+                padding: 8px 14px;
+            }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 28px 20px;
+                max-width: 100%;
+                border-radius: 20px;
+            }
+
+            .logo-placeholder {
+                font-size: 26px;
+            }
+
+            .badge {
+                font-size: 11px;
+                padding: 6px 16px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+
             .subtitle {
                 font-size: 14px;
+                margin-bottom: 30px;
+                line-height: 1.5;
             }
-            
+
+            .buttons {
+                gap: 12px;
+                margin-bottom: 30px;
+            }
+
             .btn {
-                padding: 14px 24px;
-                font-size: 15px;
+                padding: 14px 20px;
+                font-size: 14px;
+                border-radius: 12px;
             }
-            
+
+            .btn-icon {
+                width: 20px;
+                height: 20px;
+            }
+
             .stats {
-                gap: 16px;
+                gap: 12px;
+                padding-top: 24px;
             }
-            
+
             .stat-number {
-                font-size: 20px;
+                font-size: 18px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .lang-switcher {
+                top: 8px;
+                left: 8px;
+                gap: 6px;
+            }
+
+            .lang-btn {
+                padding: 8px 12px;
+                font-size: 11px;
+                border-radius: 10px;
+            }
+
+            .partner-badge {
+                top: 8px;
+                right: 8px;
+                font-size: 10px;
+                padding: 6px 12px;
+                border-radius: 16px;
+            }
+        }
+
+        /* Very small mobile screens */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .btn {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .stat-number {
+                font-size: 16px;
             }
         }
         
@@ -359,10 +498,10 @@
     
     <div class="lang-switcher">
         <button class="lang-btn active" id="langEN" onclick="setLanguage('en')">
-            <span style="font-size: 20px; margin-right: 6px;">🇬🇧</span> EN
+            🇬🇧 EN
         </button>
         <button class="lang-btn" id="langRU" onclick="setLanguage('ru')">
-            <span style="font-size: 20px; margin-right: 6px;">🇷🇺</span> RU
+            🇷🇺 RU
         </button>
     </div>
     
@@ -372,7 +511,7 @@
     
     <div class="container">
         <div class="logo-container">
-            <img src="logo.png" class="logo" alt="Shiba Cars">
+            <img src="/logo.png" class="logo" alt="Shiba Cars">
         </div>
         
         <div class="badge" data-lang="badge">Premium Cars in Phuket</div>
@@ -387,12 +526,19 @@
                 </svg>
                 <span data-lang="whatsapp">Contact on WhatsApp</span>
             </a>
-            
+
             <a href="#" class="btn btn-telegram" onclick="trackAndRedirect('telegram'); return false;">
                 <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 10px;">
                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
                 <span data-lang="telegram">Contact on Telegram</span>
+            </a>
+
+            <a href="https://shiba-cars.com/" target="_blank" class="btn btn-website">
+                <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 10px;">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span data-lang="website">Visit our website</span>
             </a>
         </div>
         
@@ -414,7 +560,7 @@
     
     <script>
         // Конфигурация
-        const API_URL = 'https://shibo-tg-backend-production.up.railway.app';
+        // API URL убран - трекинг обрабатывается сервером
         const WHATSAPP_NUMBER = '66959657805';
         const TELEGRAM_CHANNEL = 'ShibaCars_Phuket';
         let WHATSAPP_MESSAGE = 'Hello! I am interested in car rental in Phuket.';
@@ -429,6 +575,7 @@
                 'subtitle': 'Exclusive collection of cars for special moments. Contact us in a convenient way!',
                 'whatsapp': 'Contact on WhatsApp',
                 'telegram': 'Contact on Telegram',
+                'website': 'Visit our website',
                 'models': 'Models',
                 'years': 'Years on market',
                 'satisfied': 'Satisfied clients',
@@ -442,6 +589,7 @@
                 'subtitle': 'Эксклюзивная коллекция автомобилей для особых моментов. Свяжитесь с нами удобным способом!',
                 'whatsapp': 'Написать в WhatsApp',
                 'telegram': 'Написать в Telegram',
+                'website': 'Посетить наш сайт',
                 'models': 'Моделей',
                 'years': 'Года на рынке',
                 'satisfied': 'Довольных клиентов',
@@ -498,27 +646,11 @@
             const loading = document.getElementById('loading');
             loading.classList.add('active');
             
-            // Если есть партнерский код и API настроен, отправляем статистику
-            if (partnerCode && API_URL !== 'https://shibo-cars-bot.up.railway.app') {
-                fetch(`${API_URL}/api/redirect`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        partnerCode: partnerCode,
-                        clickId: clickId,
-                        type: type
-                    })
-                })
-                .then(() => {
-                    redirectToMessenger(type);
-                })
-                .catch(error => {
-                    console.error('Error tracking:', error);
-                    redirectToMessenger(type);
-                });
+            // Если сервер внедрил функцию trackRedirect, используем её
+            if (typeof trackRedirect === 'function') {
+                trackRedirect(type);
             } else {
+                // Иначе просто перенаправляем
                 redirectToMessenger(type);
             }
         }
@@ -535,21 +667,7 @@
             window.location.href = url;
         }
         
-        // Отслеживаем просмотр страницы
-        if (partnerCode && API_URL !== 'https://shibo-cars-bot.up.railway.app') {
-            setTimeout(() => {
-                fetch(`${API_URL}/api/track-view`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        partnerCode: partnerCode,
-                        clickId: clickId
-                    })
-                }).catch(console.error);
-            }, 1000);
-        }
+        // Трекинг просмотров обрабатывается сервером при загрузке страницы
     </script>
 </body>
 </html>
