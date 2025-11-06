@@ -2,6 +2,21 @@
   command = ""
   publish = "build"
 
+# Редирект партнерских ссылок на Railway для трекинга
+[[redirects]]
+  from = "/r/*"
+  to = "https://shibo-tg-backend-production.up.railway.app/r/:splat"
+  status = 200
+  force = true
+
+# API редиректы на Railway
+[[redirects]]
+  from = "/api/*"
+  to = "https://shibo-tg-backend-production.up.railway.app/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback для остальных путей
 [[redirects]]
   from = "/*"
   to = "/index.html"
