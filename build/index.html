@@ -729,9 +729,8 @@
         function redirectToMessenger(type) {
             let url;
             if (type === 'whatsapp') {
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                const waUrl = isMobile ? 'whatsapp://send' : 'https://wa.me';
-                url = `${waUrl}/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+                // Используем wa.me для всех платформ - он работает и на мобильных, и на десктопе
+                url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
             } else {
                 url = `https://t.me/${TELEGRAM_CHANNEL}`;
             }
